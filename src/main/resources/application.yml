@@ -1,0 +1,10 @@
+embedded-mysql:
+  port: 2215
+  username: processor
+  password: test
+  schema: drivingtime
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:${embedded-mysql.port}/${embedded-mysql.schema}
+    username: ${embedded-mysql.username}
+    password: ${embedded-mysql.password}
